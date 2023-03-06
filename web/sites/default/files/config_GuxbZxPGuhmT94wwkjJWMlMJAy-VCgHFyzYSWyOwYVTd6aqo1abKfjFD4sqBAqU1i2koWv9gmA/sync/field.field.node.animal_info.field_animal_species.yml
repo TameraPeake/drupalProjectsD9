@@ -1,0 +1,29 @@
+uuid: 72b0158b-5254-405d-9faf-f4ab9679491f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animal_species
+    - node.type.animal_info
+    - taxonomy.vocabulary.species
+id: node.animal_info.field_animal_species
+field_name: field_animal_species
+entity_type: node
+bundle: animal_info
+label: 'animal species'
+description: 'select the species of the animal.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      species: species
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

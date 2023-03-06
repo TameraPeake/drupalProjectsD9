@@ -1,0 +1,8 @@
+uuid: f3d3c96d-2908-4e81-b642-e1b88a13b6bd
+langcode: en
+status: true
+dependencies: {  }
+name: Personality
+vid: personality
+description: 'Add a personality type for your furry friend!'
+weight: 0

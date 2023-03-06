@@ -1,0 +1,18 @@
+uuid: 47b829ac-ea2e-4a1c-ac6f-71c396cb3f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.animal_info
+id: node.animal_info.title
+field_name: title
+entity_type: node
+bundle: animal_info
+label: 'Animal Info'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -21,10 +21,13 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.3",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
+        "drupal/exclude_node_title": "^1.4",
         "drupal/mysql56": "^1.5",
+        "drupal/paragraphs": "^1.15",
         "drupal/stage_file_proxy": "^2.0",
         "drush/drush": "^10.0"
     },
@@ -38,7 +41,8 @@
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true,
         "vendor-dir": "vendor",

@@ -1,0 +1,8 @@
+uuid: 01b43833-6543-461a-adaf-09412f785744
+langcode: en
+status: true
+dependencies: {  }
+name: Bonded
+vid: bonded
+description: 'Is this furry friend bonded?'
+weight: 0

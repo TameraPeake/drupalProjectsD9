@@ -1,0 +1,38 @@
+uuid: 51b3d790-72a3-4f56-bff9-df8e8e993380
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bond
+    - taxonomy.vocabulary.bonded
+  module:
+    - image
+id: taxonomy_term.bonded.field_bond
+field_name: field_bond
+entity_type: taxonomy_term
+bundle: bonded
+label: 'bonded image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 3abd7b2b-a975-4164-af0d-f17790168e97
+    alt: 'two hearts '
+    title: ''
+    width: 284
+    height: 177
+field_type: image
