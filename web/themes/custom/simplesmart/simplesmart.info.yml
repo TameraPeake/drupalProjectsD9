@@ -1,0 +1,16 @@
+name: Simple Smark Classy Version
+type: theme
+description: "First test theme for Animal Shelter"
+core_version_requirement: ^8 || ^9
+core: 8.x
+base theme: classy
+screenshot: animalshelterscreenshot.jpg
+regions:
+  header: Header
+  simplesmartmenu: Navigation
+  content: Content
+  footer: Footer
+  page_top: Page Top
+  page_bottom: Page Bottom
+libraries:
+  -simplesmart/global-css

@@ -1,0 +1,20 @@
+uuid: d5042bea-e34d-4e77-bbbc-41b63c6d0a79
+langcode: en
+status: true
+dependencies:
+  theme:
+    - simplesmart
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: simplesmart_primary_admin_actions
+theme: simplesmart
+region: header
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,11 @@
+{
+  "name": "simplesmart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass assets/scss/styles.scss assets/dist/css/main.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,16 @@
+.field {
+    margin-bottom: 1.5rem;
+
+    &.field--label-inline {
+        display: flex;
+    }
+
+    .field__label {
+        font-weight: bold;
+
+        &:after {
+            content: ": ";
+            margin-right: 0.25rem;
+        }
+    }
+}
