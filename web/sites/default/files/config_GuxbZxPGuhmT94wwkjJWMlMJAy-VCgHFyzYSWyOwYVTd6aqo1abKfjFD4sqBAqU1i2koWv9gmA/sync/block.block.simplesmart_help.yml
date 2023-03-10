@@ -1,6 +1,6 @@
 uuid: 5f155a02-bd4a-4617-8c52-b0d3d88bf329
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - help
@@ -10,8 +10,8 @@ _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: simplesmart_help
 theme: simplesmart
-region: header
-weight: 1
+region: content
+weight: -6
 provider: null
 plugin: help_block
 settings:

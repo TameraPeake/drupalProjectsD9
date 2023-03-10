@@ -1,6 +1,6 @@
 uuid: af31ef64-3ca4-4127-b255-9424ad0a0005
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: simplesmart_breadcrumbs
 theme: simplesmart
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:

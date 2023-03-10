@@ -34,8 +34,8 @@ third_party_settings:
           label: ''
           context_mapping: {  }
         components:
-          9c4edabd-8d76-4436-a36e-0254d0d2f6f2:
-            uuid: 9c4edabd-8d76-4436-a36e-0254d0d2f6f2
+          cc9a2482-f9fb-47ca-9d31-32264f60541a:
+            uuid: cc9a2482-f9fb-47ca-9d31-32264f60541a
             region: content
             configuration:
               id: 'field_block:node:animal_info:field_animal_image'

@@ -1,6 +1,6 @@
 uuid: c6b11fd4-ad48-4df1-ba77-d93ba53f6ee0
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - simplesmart
@@ -8,7 +8,7 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: simplesmart_primary_local_tasks
 theme: simplesmart
-region: header
+region: content
 weight: -4
 provider: null
 plugin: local_tasks_block

@@ -1,6 +1,6 @@
 uuid: 941f990e-ebbb-46f4-bdf2-53cc797462a9
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -11,7 +11,7 @@ _core:
 id: simplesmart_search_form_wide
 theme: simplesmart
 region: header
-weight: -6
+weight: -7
 provider: null
 plugin: search_form_block
 settings:

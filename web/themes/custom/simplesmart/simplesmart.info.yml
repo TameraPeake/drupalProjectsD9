@@ -6,11 +6,19 @@ core: 8.x
 base theme: classy
 screenshot: animalshelterscreenshot.jpg
 regions:
-  header: Header
-  simplesmartmenu: Navigation
-  content: Content
-  footer: Footer
-  page_top: Page Top
-  page_bottom: Page Bottom
+  top_header: 'Top Header'
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'
+  # simplesmartmenu: Navigation
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom: 'Featured bottom'
+  footer_top: 'Footer top'
+  footer_bottom: 'Footer'
 libraries:
-  -simplesmart/global-css
+  - simplesmart/global-css
+  - simplesmart/pacifico

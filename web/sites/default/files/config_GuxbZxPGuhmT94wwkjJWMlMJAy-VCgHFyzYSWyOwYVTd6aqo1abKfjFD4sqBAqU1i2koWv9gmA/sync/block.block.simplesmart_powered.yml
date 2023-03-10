@@ -1,6 +1,6 @@
 uuid: 43241ac4-d72c-4fd8-9d50-f72b07fe71e9
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
 id: simplesmart_powered
 theme: simplesmart
-region: header
-weight: 3
+region: top_header
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:
