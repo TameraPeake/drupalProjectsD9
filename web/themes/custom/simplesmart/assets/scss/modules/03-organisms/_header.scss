@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #52489c;
+    padding: 10px;
+    border-bottom: 4px solid #f45b69;
     .site-logo {
         img {
             max-width: 150px;
@@ -17,6 +20,17 @@
         li {
             display: inline;
             padding: 8px;
+            font-size: 25px;
+            a {
+                color: #ebebeb;
+                text-decoration: none;
+            }
         }
+    }
+
+    #block-simplesmart-site-branding {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 100px;
     }
 }
