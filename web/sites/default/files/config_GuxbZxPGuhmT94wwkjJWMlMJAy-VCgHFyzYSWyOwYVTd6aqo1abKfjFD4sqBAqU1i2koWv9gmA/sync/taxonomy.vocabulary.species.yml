@@ -1,8 +1,0 @@
-uuid: 787d4c13-faab-457d-9477-bbec89f73571
-langcode: en
-status: true
-dependencies: {  }
-name: Species
-vid: species
-description: 'Animal Species '
-weight: 0
