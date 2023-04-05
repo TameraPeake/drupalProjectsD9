@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.js"],"names":["myFunction","p1","p2","document","getElementById","innerHTML"],"mappings":"AAAA,SAASA,WAAWC,EAAIC,GACpB,OAAOD,EAAKC,CACd,CACFC,SAASC,eAAe,MAAM,EAAEC,UAAYL,WAAW,EAAG,CAAC","file":"main.js","sourcesContent":["function myFunction(p1, p2) {\n    return p1 * p2;\n  }\ndocument.getElementById(\"demo\").innerHTML = myFunction(4, 3); "]}

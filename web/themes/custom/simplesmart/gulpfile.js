@@ -11,9 +11,11 @@ npm install --save-dev gulp-concat  //compiles js files
 npm install --save-dev gulp-replace //should be used to clear browser cache
 npm install --save-dev gulp-babel  //used to make js files backwards compatible on browsers
 npm install --save-dev gulp-uglify //minifies js files
+npm install --save-dev gulp-rename
 npm install --save-dev gulp-eslint //searches js files for errors
 npm install --save-dev gulp-sass
-npm install css-minify -g
+npm install --save-dev sass //you need both the gulp and the node sass
+npm install css-minify
 
 
 if using eslint, in the project root (not themes), run
@@ -28,8 +30,9 @@ const { series, parallel, watch, src, dest } = require('gulp'); //sets the helpe
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-// const sass = require('gulp-sass'); I use the sass module that runs compile, watch, and minify
-// const minify = require('css-minify');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass')(require('sass'));
+const minify = require('css-minify');
 
 
 //newest way to write gulp function as of 2022
@@ -48,20 +51,32 @@ const concat = require('gulp-concat');
 
 
 function compileJs() {
-    return src(['js/custom/*.js', '!node_modules/**', '**/*.js'], { sourcemaps: true })
-        // .pipe(sourcemaps.init())
-        // .pipe(babel())
-        // .pipe(uglify())
-        // .pipe(sourcemaps.write('./'))
+    return src(['js/custom/*.js', '!node_modules/**', 'js/vendor/*.js'], { sourcemaps: true })
+        .pipe(babel())
+        .pipe(concat('main-unuglified.js'))
+        .pipe(dest('js/'))
+        .pipe(rename('main.js'))
+        .pipe(uglify())
         .pipe(dest('js/', { sourcemaps: '.' }));
 }
 
-function watchJS() {
-    watch(['js/custom/*.js', '!node_modules/**', '**/*.js'], parallel(compileJs));
+function compileScss() {
+    return src('assets/scss/modules/**/*.scss', { sourcemaps: true })
+        .pipe(sass())
+        .pipe(dest('assets/dist/css/.'))
 }
 
+function watchScss(cb) {
+    watch('assets/scss/modules/**/*.scss', compileScss);
+}
+function watchJS(cb) {
+    watch('js/custom/*.js', compileJs);
+    watch('js/vendor/*.js', compileJs);
+}
 
+exports.compileSass = compileScss;
 exports.compileJavascript = compileJs;
-exports.watch = watchJS;
+exports.watchJavascript = watchJS;
+exports.watchSass = watchScss;
 
-exports.default = series(parallel(compileJs),watchJS);
+exports.default = series(compileScss,compileJs,watchScss,watchJS);
