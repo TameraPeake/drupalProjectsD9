@@ -1,0 +1,25 @@
+uuid: 37b4aae4-fd84-4dbc-a600-952e0147fb27
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:dc9a6b66-0078-45bd-8d10-862cb4a65d20'
+  module:
+    - block_content
+  theme:
+    - simplesmart
+id: socialicons
+theme: simplesmart
+region: top_header
+weight: 0
+provider: null
+plugin: 'block_content:dc9a6b66-0078-45bd-8d10-862cb4a65d20'
+settings:
+  id: 'block_content:dc9a6b66-0078-45bd-8d10-862cb4a65d20'
+  label: 'Social Icons'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

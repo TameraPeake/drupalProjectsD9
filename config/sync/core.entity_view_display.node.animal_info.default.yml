@@ -1,0 +1,110 @@
+uuid: 49ea993b-91cc-483d-9a14-2de9f6c86472
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.animal_info.body
+    - field.field.node.animal_info.field_animal_age
+    - field.field.node.animal_info.field_animal_birthday
+    - field.field.node.animal_info.field_animal_extra_imgs
+    - field.field.node.animal_info.field_animal_image
+    - field.field.node.animal_info.field_animal_info
+    - field.field.node.animal_info.field_animal_is_bonded
+    - field.field.node.animal_info.field_animal_name
+    - field.field.node.animal_info.field_animal_personality
+    - field.field.node.animal_info.field_animal_species
+    - image.style.large
+    - node.type.animal_info
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.animal_info.default
+targetEntityType: node
+bundle: animal_info
+mode: default
+content:
+  field_animal_age:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_animal_birthday:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_animal_extra_imgs:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_animal_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_animal_info:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_animal_is_bonded:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_animal_name:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_animal_personality:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_animal_species:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  body: true
+  links: true

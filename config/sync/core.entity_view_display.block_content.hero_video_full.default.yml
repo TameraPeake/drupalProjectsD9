@@ -1,0 +1,22 @@
+uuid: 2e04f3db-2866-4762-ad2a-c5e119d75d3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_video_full
+    - field.field.block_content.hero_video_full.body
+  module:
+    - text
+id: block_content.hero_video_full.default
+targetEntityType: block_content
+bundle: hero_video_full
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: a676d8d8-58f7-47df-a8b6-32aef135f4b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bonded_animal
+    - node.type.animal_info
+    - taxonomy.vocabulary.bonded
+id: taxonomy_term.bonded.field_bonded_animal
+field_name: field_bonded_animal
+entity_type: taxonomy_term
+bundle: bonded
+label: 'bonded animal'
+description: 'This is the bonded animal'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      animal_info: animal_info
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

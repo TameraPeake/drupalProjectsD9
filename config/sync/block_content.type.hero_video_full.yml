@@ -1,0 +1,8 @@
+uuid: 4460eecb-22b8-43ef-9dc7-979084d5d9fc
+langcode: en
+status: true
+dependencies: {  }
+id: hero_video_full
+label: 'Hero Video (Full)'
+revision: 0
+description: 'This is is a full page hero video'
