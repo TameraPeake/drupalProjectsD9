@@ -15,7 +15,6 @@ npm install --save-dev gulp-rename
 npm install --save-dev gulp-eslint //searches js files for errors
 npm install --save-dev gulp-sass
 npm install --save-dev sass //you need both the gulp and the node sass
-npm install css-minify
 
 
 if using eslint, in the project root (not themes), run
@@ -32,7 +31,6 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass')(require('sass'));
-const minify = require('css-minify');
 
 
 //newest way to write gulp function as of 2022
