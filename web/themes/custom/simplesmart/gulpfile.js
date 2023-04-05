@@ -62,14 +62,18 @@ function compileJs() {
 
 function compileScss() {
     return src('assets/scss/modules/**/*.scss', { sourcemaps: true })
-        .pipe(sass())
-        .pipe(dest('assets/dist/css/.'))
+        .pipe(concat('styles-unminified.scss'))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(dest('assets/dist/'))
+        .pipe(rename('styles.css'))
+        .pipe(dest('assets/dist/css/'))
 }
 
-function watchScss(cb) {
+function watchScss() {
     watch('assets/scss/modules/**/*.scss', compileScss);
 }
-function watchJS(cb) {
+
+function watchJS() {
     watch('js/custom/*.js', compileJs);
     watch('js/vendor/*.js', compileJs);
 }
