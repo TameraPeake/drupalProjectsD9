@@ -3,6 +3,12 @@ global-css:
   css:
     theme:
       assets/dist/css/styles.css: {}
+  js:
+    js/main.js: {}
+    
+  dependencies:
+    - core/drupal
+    - core/once
 # pacifico:
 #   license:
 #     name: SIL OPEN Font License 1.1

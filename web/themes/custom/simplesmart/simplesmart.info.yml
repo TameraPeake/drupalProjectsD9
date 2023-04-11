@@ -8,13 +8,14 @@ screenshot: animalshelterscreenshot.jpg
 regions:
   top_header: 'Top Header'
   header: 'Header'
+  top_menu : 'Top menu'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   page_top: 'Page Top'
   page_bottom: 'Page Bottom'
   # simplesmartmenu: Navigation
   content: 'Content'
-  hero: 'Hero Video'
+  hero: 'Hero'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   featured_bottom: 'Featured bottom'

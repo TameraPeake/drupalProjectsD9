@@ -81,4 +81,4 @@ exports.compileJavascript = compileJs;
 exports.watchJavascript = watchJS;
 exports.watchSass = watchScss;
 
-exports.default = series(compileScss,compileJs,watchScss,watchJS);
+exports.default = series(compileScss,compileJs,parallel(watchScss,watchJS));
