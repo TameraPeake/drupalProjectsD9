@@ -1,10 +1,10 @@
 (function (Drupal, once) {
-    Drupal.behaviors.homeSlideShowHero = {
+    Drupal.behaviors.commonSlider = {
         attach: function (context, settings) { 
             let slideIndex = 0;
-            function showHeroSlider() {
+            function showCommonSlider() {
                 let i;
-                let totalImages = document.querySelectorAll(".actual-class-for-hero-img-home-slider");
+                let totalImages = document.querySelectorAll(".event-slider-individual-events");
                 for(i = 0; i < totalImages.length; i++) {
                     totalImages[i].style.display = "none";
                 }
@@ -14,11 +14,11 @@
                 }
 
                 totalImages[slideIndex - 1].style.display = "block";
-                setTimeout(showHeroSlider, 8000);
+                setTimeout(showCommonSlider, 6000);
             }
 
 
-            Window.onload = showHeroSlider();
+            Window.onload = showCommonSlider();
 
         }
     }

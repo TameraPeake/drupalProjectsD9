@@ -8,6 +8,7 @@ screenshot: animalshelterscreenshot.jpg
 regions:
   top_header: 'Top Header'
   header: 'Header'
+  top_search: 'Top Search'
   top_menu : 'Top menu'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
