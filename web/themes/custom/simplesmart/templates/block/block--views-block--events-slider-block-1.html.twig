@@ -35,12 +35,16 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+ <div class="slider-container">
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+    <canvas id="myCanvas" width="800px" height="600px" style="border:1px solid #000000;"></canvas>
+    {# <img src="/themes/custom/simplesmart/assets/images/2023/animalPrint.png" id="single-footprint"> #}
 </div>

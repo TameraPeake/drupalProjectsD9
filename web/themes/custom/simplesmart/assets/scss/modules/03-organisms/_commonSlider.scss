@@ -1,12 +1,16 @@
 .event-slider-block {
     padding: 50px 0;
+    position: relative; //added for footprints
     .event-slider {
         left: 80px;
         position: relative;
-        width: 40%;
+        width: 50%;
         .view-content {
-            display: flex;
             height: 400px;
+            p {
+                width: 70%;
+
+            }
             &::before {
                 content: "";
                 background-color: lightblue;
