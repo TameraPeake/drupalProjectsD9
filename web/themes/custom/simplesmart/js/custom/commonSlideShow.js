@@ -20,6 +20,27 @@
 
             Window.onload = showCommonSlider();
 
+
+            //this triggers the slideshow at a certain height of the window screen
+
+            function moveSlideshowOntoPage() {
+                var hasFired = false;
+
+                if (document.documentElement.scrollTop >= 700 && !hasFired || window.pageYOffset >= 700 && !hasFired || document.body.scrollTop >= 700 && !hasFired ) {
+                    hasFired = true;  
+                                     
+                    let homeMiniSlider = document.querySelectorAll(".event-slider");
+                    homeMiniSlider[0].classList.add("moveMiniSlider");
+                }
+                else {
+                    console.log("2");
+                    let homeMiniSlider = document.querySelectorAll(".event-slider");
+                    homeMiniSlider[0].classList.remove("moveMiniSlider");
+                }
+            }
+
+
+            window.addEventListener('scroll', moveSlideshowOntoPage);
         }
     }
 })(Drupal, once);

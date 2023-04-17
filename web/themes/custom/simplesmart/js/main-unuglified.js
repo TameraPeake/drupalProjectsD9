@@ -16,6 +16,22 @@
         setTimeout(showCommonSlider, 6000);
       }
       Window.onload = showCommonSlider();
+
+      //this triggers the slideshow at a certain height of the window screen
+
+      function moveSlideshowOntoPage() {
+        var hasFired = false;
+        if (document.documentElement.scrollTop >= 700 && !hasFired || window.pageYOffset >= 700 && !hasFired || document.body.scrollTop >= 700 && !hasFired) {
+          hasFired = true;
+          let homeMiniSlider = document.querySelectorAll(".event-slider");
+          homeMiniSlider[0].classList.add("moveMiniSlider");
+        } else {
+          console.log("2");
+          let homeMiniSlider = document.querySelectorAll(".event-slider");
+          homeMiniSlider[0].classList.remove("moveMiniSlider");
+        }
+      }
+      window.addEventListener('scroll', moveSlideshowOntoPage);
     }
   };
 })(Drupal, once);
@@ -23,32 +39,40 @@
   Drupal.behaviors.footprintsHome = {
     attach: function (context, settings) {
       window.onload = function () {
-        grabFootprint();
-      };
-      function grabFootprint() {
-        const footprint = new Image(); //this just access the canvas's api
-        footprint.src = "/themes/custom/simplesmart/assets/images/2023/animalPrint.png";
-        const ctx = document.getElementById("myCanvas").getContext("2d");
-        footprint.addEventListener(
-        //adding the event listenter so that the function doesn't start before the image finishes loading
-        "load", () => {
-          for (let i = 0; i < 4; i++) {
-            for (let j = 0; j < 2; j++) {
-              ctx.save(); //saves the current canvas
-              ctx.rotate(-0.4);
-              //translate controls where the footprints are placed in the canvas
-              //translate comes first and then the draw image (not sure why, but it won't work if otherway around)
-              if (j == 1) {
-                ctx.translate(200 + j * 40, 30 + i * 30);
-              } else {
-                ctx.translate(100 + j * 10, 90 + i * 30);
-              }
-              ctx.drawImage(footprint, j * 100, i * 220, 80, 80); //drawImagefunction(img, where on y axis, where on x axis, width, height)
-              ctx.restore();
+        let footSteps = 0;
+        // var interval = setInterval(grabFootprint, 1000);
+
+        var interval = setInterval(function () {
+          // function grabFootprint() {
+
+          const footprint = new Image(); //this just access the canvas's api
+          footprint.src = "/themes/custom/simplesmart/assets/images/2023/animalPrint.png";
+          const ctx = document.getElementById("myCanvas").getContext("2d", {
+            willReadFrequently: true
+          });
+          footprint.addEventListener(
+          //adding the event listenter so that the function doesn't start before the image finishes loading
+          "load", () => {
+            ctx.save();
+            ctx.drawImage(footprint, 400, 400, 80, 80); //drawImagefunction(img, where on y axis, where on x axis, width, height)
+            var imageData = ctx.getImageData(400, 400, 80, 80);
+            if (footSteps % 2 == 0 && footSteps < 5) {
+              let newStep = 300 - footSteps * 70;
+              ctx.putImageData(imageData, 300, newStep);
+              console.log("first step:" + newStep);
             }
-          }
-        }, false);
-      }
+            if (footSteps % 2 !== 0 && footSteps < 5) {
+              let newStep2 = 350 - footSteps * 90;
+              ctx.putImageData(imageData, 400, newStep2);
+              console.log("second step:" + newStep2);
+            }
+            if (footSteps == 5) {
+              clearInterval(interval);
+            }
+            footSteps += 1;
+          }, false);
+        }, 1000);
+      };
     }
   };
 })(Drupal, once, jQuery);

@@ -1,12 +1,17 @@
 .event-slider-block {
-    padding: 50px 0;
+    padding: 100px 0;
     position: relative; //added for footprints
     .event-slider {
-        left: 80px;
+        left: -100%;
         position: relative;
         width: 50%;
+        transition: left 2s;
+
         .view-content {
             height: 400px;
+            .event-slider-individual-events {
+                height: 300px;
+            }
             p {
                 width: 70%;
 
@@ -23,4 +28,9 @@
             }
         }
     }
+}
+
+
+.event-slider.moveMiniSlider {
+    left: 80px;
 }
