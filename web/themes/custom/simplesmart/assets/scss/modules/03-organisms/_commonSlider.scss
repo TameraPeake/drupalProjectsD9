@@ -1,11 +1,12 @@
-.event-slider-block {
+#block-views-block-event-slider-block-1 {
     padding: 100px 0;
     position: relative; //added for footprints
-    .event-slider {
-        left: -100%;
+    .view-event-slider {
+        // left: -100%;
         position: relative;
         width: 50%;
         transition: left 2s;
+        left: 30%;
 
         .view-content {
             height: 400px;

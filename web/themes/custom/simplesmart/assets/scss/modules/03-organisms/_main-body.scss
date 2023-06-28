@@ -1,7 +1,9 @@
-.main-body {
-    display: flex;
+body {
+    height: 100vh;
+    overflow: auto;
+    width: 100vw;
 }
 
-.layout-content {
-
+.main-body {
+    display: flex;
 }

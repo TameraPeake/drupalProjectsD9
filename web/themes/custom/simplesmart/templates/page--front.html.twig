@@ -70,6 +70,7 @@
 
       <div class="layout-content">
         {{ page.content }}
+         
       </div>{# /.layout-content #}
 
       {% if page.sidebar_second %}
@@ -81,7 +82,7 @@
 
   </main>
 
-  {% if page.featured_bottom%}
+  {% if page.featured_bottom %}
     <footer role="contentinfo">
       {{ page.featured_bottom }}
     </footer>
@@ -95,6 +96,7 @@
     <footer role="contentinfo">
       {{ page.footer_bottom }}
     </footer>
+    <div> {{ welcome }}</div>
   {% endif %}
 
 </div>{# /.layout-container #}

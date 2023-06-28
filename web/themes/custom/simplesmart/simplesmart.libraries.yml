@@ -3,12 +3,11 @@ global-css:
   css:
     theme:
       assets/dist/css/styles.css: {}
+
+global-scripts:
   js:
     js/main.js: {}
-    
-  dependencies:
-    - core/drupal
-    - core/once
+
 # pacifico:
 #   license:
 #     name: SIL OPEN Font License 1.1
@@ -17,3 +16,6 @@ global-css:
 #     theme:
 #     # fonts.googleapis.com/css?family=Pacifico: { type: external }
 #     assets/dist/css/styles.css: {}
+
+
+#{{ attach_library('simplesmart/global-css') }}

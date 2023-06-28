@@ -1,0 +1,22 @@
+<?php
+
+// function THEMENAME_preprocess_HOOK(&$variables) naming convention of a preprocess function
+
+function simplesmart_preprocess_node(&$variables) { 
+    $variables['current_user_is_owner'] = FALSE;
+
+    if($variables['logged_in'] == TRUE && $variables['node']->getOwnerID() == $variables['user']->id()) {
+        //$variables['label'] = "";
+        $variables['current_user_is_owner'] = TRUE;
+    }
+   // $variables['pages']['featured_bottom'] += "-this is a test";
+    // if($path_alias == "true") {
+    //     $variables[‘welcome’] ="welcome";
+    // }
+}
+
+function site_preprocess_page(&$variables) {
+    $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+    $variables['welcome'] = $path_alias;
+}
+?>

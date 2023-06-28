@@ -32,6 +32,7 @@
         "drupal/media_directories": "^2.0",
         "drupal/mysql56": "^1.5",
         "drupal/paragraphs": "^1.15",
+        "drupal/pathauto": "^1.11",
         "drupal/stage_file_proxy": "^2.0",
         "drush/drush": "^10.0"
     },

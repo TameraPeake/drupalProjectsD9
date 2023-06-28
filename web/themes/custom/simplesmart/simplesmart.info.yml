@@ -22,6 +22,10 @@ regions:
   featured_bottom: 'Featured bottom'
   footer_top: 'Footer top'
   footer_bottom: 'Footer'
+  #everything called here is applied to global styling
 libraries:
-  - simplesmart/global-css
-  - simplesmart/pacifico
+  - simplesmart/global-css #these are taken from the .libraries.yml file
+  - simplesmart/global-scripts
+  - core/drupal
+  - core/once
+  - core/jquery
