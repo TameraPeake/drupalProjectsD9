@@ -4,9 +4,8 @@
     .view-event-slider {
         // left: -100%;
         position: relative;
-        width: 50%;
         transition: left 2s;
-        left: 30%;
+        // left: 30%;
 
         .view-content {
             height: 400px;
@@ -19,13 +18,17 @@
             }
             &::before {
                 content: "";
-                background-color: lightblue;
+                background-color: #01ffff;
                 height: 100%;
                 left: 30px;
                 position: absolute;  
                 top: 0;
                 width: 500px;
                 z-index: -1; 
+            }
+
+            .views-field-body {
+                width: 40vw;
             }
         }
     }

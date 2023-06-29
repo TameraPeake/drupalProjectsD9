@@ -1,9 +1,11 @@
 #myCanvas {
     height: auto;
+    left: 130%;
     position: absolute;
-    right: 0;
-    top: 0;
+    // right: 0;
+    top: 20%;
     min-width: 75%;
+    rotate: -60deg;
     z-index: -2;
 }
 

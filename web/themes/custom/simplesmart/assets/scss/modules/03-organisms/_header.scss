@@ -63,6 +63,13 @@
     }  
 }
 
+#primary-header {
+    img {
+        position: relative;
+        z-index: 4;
+    }
+}
+
 // .regionHeroHomePadding {
 //      padding-top: 200px;
 // }

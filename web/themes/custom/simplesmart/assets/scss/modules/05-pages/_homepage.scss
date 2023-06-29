@@ -1,0 +1,23 @@
+.event-slider-individual-events {
+    .views-field-field-event-slider-title {
+        .field-content {
+           a {
+                color: #f45b69;
+                font-size: 38px;
+                font-weight: bold;
+                padding-bottom: 10px;
+                text-decoration: none;
+           }
+        }
+    }
+
+    .views-field-body {
+        .field-content {
+            a {
+                color: #000;
+                font-size: 18px;
+                text-decoration: none;
+            }
+        }
+    }
+}
